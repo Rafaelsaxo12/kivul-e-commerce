@@ -18,13 +18,6 @@ body {
 main {
     flex: 1;
 }
-a { 
-    color: #333;
-    text-decoration: none; 
-}
-a:hover { 
-    text-decoration: underline;
-}
 button {
     padding: 10px;
     height: 50px;
@@ -69,7 +62,29 @@ p {
     justify-content:  center;
     align-items: center;
     background-color: rgb(2, 79, 143);
+    color: white;
 }
+.header__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.inactive {
+    transform: translateX(-100%);
+}
+
 /* --- NavBar --- */
 .navBarSites {
     /* background-color: yellow; */
@@ -80,15 +95,34 @@ p {
     padding: 10px;
 }
 .navBarSites__list {
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    gap: 40px;
-    padding: 0 10px 0 0;
+    justify-content: end;
+    align-items: center;
+}
+.navBarSites__list span{
+    background-color: white;
+    color: gray;
+    padding: 10px;
+}
+.navBarSites__list a {
+    font-size: .9rem;
+    color: rgb(24, 116, 209);
+    text-decoration: none; 
+    white-space: nowrap;
+}
+.navBarSites__list a:hover {
+    color: rgba(24, 117, 209, 0.704);
 }
 .navBarSites__item {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.navBarSites__item span {
+    margin:  0 15px;
 }
 .navBar { 
     position: sticky; 
@@ -110,14 +144,27 @@ p {
     max-height: 50px; 
 }
 .navBar__list { 
+    
     display: flex; 
     flex-direction: row; 
     align-items: center; 
     gap: 20px; 
 }
+.navBar__list a {
+    color: black;
+    text-decoration: none; 
+}
+.navBar__list a:hover {
+    font-weight: bold;
+    color: rgb(2, 79, 143);
+}
 .navBar__item { 
     list-style: none; 
 }
+.navBar__item:hover {
+    text-decoration:  underline  rgb(2, 79, 143);
+}
+
 .navBar__searchInput {
     font-size: 1.5rem;
     gap: 20px;
@@ -140,6 +187,12 @@ p {
     display: flex;
     flex-direction: column;
     
+}
+.column__extra {
+    width: 100%;
+}
+.column__extra img {
+    width: 100%;
 }
 .figure__topGift img{
     max-width: 100%;
