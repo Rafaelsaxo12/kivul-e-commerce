@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -18,7 +18,7 @@ main {
     flex: 1;
 }
 a { 
-    color: #007bff; 
+    color: #333;
     text-decoration: none; 
 }
 a:hover { 
@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     font-weight: bold;
 }
-
 p {
     margin-bottom: 1rem;
 }
@@ -54,6 +53,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 }
 .navBarSites__list {
     width: 100%;
@@ -73,6 +73,8 @@ p {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 .navBar input{
     height: 30px;
@@ -89,7 +91,50 @@ p {
     display: flex;
 }
 /* --- Main--- */
-
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.figure__topGift img{
+    max-width: 100%;
+    min-height: 100%;
+}
+.figure__topGiftAncle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+.figure__topGiftAncle a{
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+.container__column2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 20px;
+}
+.column2__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.column2__item button {
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 90%;
+    height: 40px;
+}
+.column2__item img {
+    width: 100%;
+}
 /* --- footer --- */
 footer {
     bottom: 0;
