@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Kivul</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
+<body class="body">
     <header class="header">
         <span>COMPRA ONLINE Y PAGA CON HASTA 6 CUOTAS SIN INTERÉS</span>
         <nav class="navBarSites">
@@ -18,19 +19,31 @@
                 <li class="navBarSites__item">Mi Carro</li>
             </ul>
         </nav>
-        <nav class="navBar">
-            <h1 class="navBar__logo">Kivul</h1>
-            <ul class="navBar__list">
-                <li class="navBar__item">HOMBRE</li>
-                <li class="navBar__item">MUJER</li>
-                <li class="navBar__item">NIÑOS</li>
-                <li class="navBar__item">ACCESORIOS</li>
-                <li class="navBar__item">SALE</li>
-            </ul>
-            <input class="navBar__search" type="text" placeholder="Buscar">
-        </nav>
     </header>
     <main class="container">
+        <nav class="navBar"> 
+            <a class="logo" href="/"> 
+                <img src="/assets/img/kivulLogo.webp" alt="Kivul logo"> 
+            </a> 
+            <ul class="navBar__list"> 
+                <li class="navBar__item"><box-icon name='search'></box-icon></li> 
+                <li class="navBar__item">MUJER</li> 
+                <li class="navBar__item">NIÑOS</li> 
+                <li class="navBar__item">ACCESORIOS</li> 
+                <li class="navBar__item">THE TOP GIFT</li> 
+                <li class="navBar__item">REGALOS</li> 
+                <li class="navBar__item">SALE</li> 
+            </ul> 
+            <div class="navBar__search">
+                <div class="navBar__searchInput">
+                    <span class="path">
+                        <i class='bx bx-search'></i>
+                    </span>
+                    <input type="text" placeholder="Buscar"> 
+                </div>
+                <hr>
+            </div>
+        </nav>
         <div class="column">
             <figure class="column__figure">
                 <div class="figure__topGift">
@@ -38,9 +51,9 @@
                         <img src="/assets/img/KivulImg1.webp" alt="the top gift img">
                     </a>
                     <div class="figure__topGiftAncle">
-                        <a href="/">NEW ARRIVALS</a>
+                        <button href="/">NEW ARRIVALS</button>
                         <span>/</span>
-                        <a href="/">FAVORITOS</a>
+                        <button href="/">FAVORITOS</button>
                     </div>
                 </div>
             </figure>
@@ -64,9 +77,23 @@
                     <button>VER MÁS</button>
                 </div>
             </figure>
-            <figure class="container__column3">img</figure>
-            <figure class="container__column4">img</figure>
+            <figure class="container__column3">
+                <a href="">
+                    <img src="/assets/img/KIVUL_ESPECIAL_TRAJE_BAño.webp" alt="">
+                </a>
+
+            </figure>
+            <figure class="container__column4">
+                <a href="">
+                    <img src="/assets/img/KIVUL_BANNER_4RESEt.webp" alt="">
+                </a>
+            </figure>
         </div>
+        <hr>
+        <article class="article">
+            <h3><b>Kivul, Live Outside</b></h3>
+            <p>Encuentra la mejor ropa urbana outside hecha con material reciclado. Descubre la calidad Kivul en nuestras chaquetas, <strong>polerones</strong>, <strong>calzado</strong> y <strong>accesorios</strong> para <strong>hombre</strong>, <strong>mujer</strong> y <strong>niño</strong>. Prepara esta temporada con todo el estilo y calidez con nuestras chaquetas <strong>Tolna</strong> y <strong>Siklos</strong> para <strong>hombre</strong> y <strong>mujer</strong>. Cómbate el frío con nuestra increíble variedad de pólar especiales para ti: <strong>Enker</strong>, <strong>Mavek</strong> y <strong>Flav</strong>.</p>
+        </article>
     </main>
     <footer>
         pie de la página

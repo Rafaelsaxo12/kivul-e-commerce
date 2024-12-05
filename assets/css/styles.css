@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body {
+    overflow-x: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,6 +25,27 @@ a {
 a:hover { 
     text-decoration: underline;
 }
+button {
+    padding: 10px;
+    height: 50px;
+    background-color: black;
+    color: black;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-shadow: 0.5px 1px 15px 5px rgba(0, 0, 0, 0.13);
+    background-image: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position .2s linear, color .2s linear;
+}
+strong {
+    color: rgb(0, 60, 255);
+}
+button:hover {
+    background-position: left bottom;
+    color: white;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     font-weight: bold;
@@ -33,6 +55,7 @@ p {
 }
 /* --- Header --- */
 .header {
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -50,6 +73,7 @@ p {
 /* --- NavBar --- */
 .navBarSites {
     /* background-color: yellow; */
+    background-color: white;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -66,30 +90,51 @@ p {
 .navBarSites__item {
     display: flex;
 }
-.navBar {
-    width: 100%;
-    /* background-color: blue; */
+.navBar { 
+    position: sticky; 
+    top: 0; 
+    width: 100%; 
+    background-color: white; 
+    box-shadow:  -20px 10px 8px 1px rgba(0, 0, 0, 0.042);
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+}
+.navBar .logo { 
+    display: flex; 
+    align-items: center; 
+}
+.navBar .logo img { 
+    max-height: 50px; 
+}
+.navBar__list { 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 20px; 
+}
+.navBar__item { 
+    list-style: none; 
+}
+.navBar__searchInput {
+    font-size: 1.5rem;
+    gap: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
+    min-height: 100%;
+    color: gray;
 }
-.navBar input{
-    height: 30px;
-    margin-right: 20px;
-    gap: 10px;
+.navBar__searchInput input {
+    font-size: 1.3rem;
+    border: none; 
+    height: 40px; 
+    margin-right: 20px; 
 }
-.navBar__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-}
-.navBar__item {
-    display: flex;
-}
+.navBar__searchInput input::placeholder {
+    color: gray;
+} 
 /* --- Main--- */
 .container {
     display: flex;
@@ -107,10 +152,13 @@ p {
     gap: 15px;
     padding: 20px;
 }
-.figure__topGiftAncle a{
-    border: 1.5px solid;
-    border-radius: 5px;
-    padding: 10px;
+.figure__topGiftAncle span {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.figure__topGiftAncle button{
+    width: 20%;
 }
 .container__column2 {
     display: flex;
@@ -125,15 +173,32 @@ p {
     align-items: center;
     gap: 5px;
 }
-.column2__item button {
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
+.column2__item button {    
     width: 90%;
-    height: 40px;
 }
 .column2__item img {
     width: 100%;
+}
+.container__column3 img {
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+.container__column4 img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.article {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.article p {
+    text-align: justify;
+    padding: 20px;
 }
 /* --- footer --- */
 footer {
