@@ -30,6 +30,7 @@ button {
     background-size: 200% 100%;
     background-position: right bottom;
     transition: background-position .2s linear, color .2s linear;
+    cursor: pointer;
 }
 strong {
     color: rgb(0, 60, 255);
@@ -65,12 +66,14 @@ p {
     color: white;
 }
 .header__slider {
-    position: relative;
+    display: contents;
     width: 100%;
     overflow: hidden;
+    white-space: nowrap; /* Evita que el contenido se desborde a la siguiente línea */
 }
+
 .slide {
-    position: absolute;
+    display: inline-block;
     width: 100%;
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -255,6 +258,44 @@ p {
 }
 /* --- footer --- */
 footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     bottom: 0;
     padding: 1em 0;
+}
+.fila__1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer__tiendas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.socialnetworks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.socialnetworks {
+    
+}
+.form__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
