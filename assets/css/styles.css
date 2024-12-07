@@ -369,3 +369,32 @@ footer {
     width: 20px;
     height: 20px;
 }
+.footer__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    margin-top: 50px;
+    gap: 100px;
+}
+.footer__info li {
+    color: cornflowerblue;
+    font-size: .9rem;
+    list-style: none;
+    padding: 8px;
+}
+.footer__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.footer__logoanchor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__logo img {
+    max-width: 10%;
+}
